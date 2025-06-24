@@ -2,3 +2,12 @@
 {%block title%}
 <h1>Congratulations {{user}}<br>you have are successfully logged in </h1>
 {%endblock%}
+{%block body%}
+    {%with messages = get_flashed_messages()%}
+        {%if messages %}
+            {%for msg in messages%}
+                <p>{{msg}}</p>
+            {%endfor%}
+        {% endif %}
+    {%endwith%}
+{%endblock%}
