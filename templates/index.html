@@ -1,15 +1,6 @@
-<html>
-    <head>
-        <title>home page</title>
-    </head>
-    <body>
-        <h1>This is {{name}}'s  family</h1>
-        {% for x in content%}
-        <p> {{x}}</p>
-        {% if x == "mummy"%}
-        <p>I love you</p>
-        {%endif%}
-        {%endfor%}
+{% extends "base.html" %}
 
-    </body>
-    </html>
+{%block body%}
+        <h1> landing page</h1>
+{%endblock%}
+    
