@@ -27,7 +27,7 @@ def home():
 def login():
     if request.method=='POST':
         #name=request.form['name']
-        name ="abhirup"
+        name =request.form['name']
         session["user"]= name
         # session.permanent=True
         found_user = users.query.filter_by(name = name).first()
